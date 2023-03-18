@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>  
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    box-sizing: border-box;
+  }
+  body{
+    background-color: rgba(213, 214, 198, 0.642);
+  }
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    height: auto;
+    background-color: rgb(247, 251, 255);
+    box-shadow: 0px 10px 20px rgb(186, 181, 180)
+
+
+}
+input{
+    width: 90%;
+    padding: 5px;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.form-group{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    line-height: 29px;
+
+}
+#btn{
+    width: 30%;
+    margin-left: 160px;
+}
+
+.form-group label{
+  /* text-align: center; */
+    padding-left: 150px;
+
+}
+
+#result{
+    color: green;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+  </style>
+<body>
+
+
+<section >
+<div class="container">
+    <form action="" class="form-group">
+      <div>
+        <label for="">Principal amount </label><br>
+        <input type="text" name="" id="principal"><br><br>
+
+      </div>
+      <div>
+        <label for="">Rate </label><br>
+        <input type="text" name="" id="rate"><br><br>
+
+      </div>
+      <div>
+        <label for="">Years </label><br>
+        <input type="text" name="" id="years"><br><br>
+
+      </div>   
+    <button type="button" id="btn" onclick="calculateSI()" >check here</button><br>
+
+    <h2 id="result"></h2>
+
+</form>
+
+</div>
+</section>
+
+
+
+  <script>
+    function calculateSI() {
+      var P = parseFloat(document.getElementById("principal").value);
+      var R = parseFloat(document.getElementById("rate").value);
+      var n = parseFloat(document.getElementById("years").value);
+      var SI = (P * R * n) / 100;
+      document.getElementById("result").innerHTML = "Simple Interest: " + SI;
+    }
+  </script>
+  
+</body>
+</html>
+
+
+
